@@ -17,6 +17,8 @@ let costoBiglietto = numeroKm * 0.21;
 
 console.log(costoBiglietto);
 
+document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBiglietto.toFixed(2) + '&euro;';
+
 // Sconti
 
 // Sconti minorenni
@@ -32,8 +34,6 @@ let quarantaPercento = costoBiglietto * 0.40;
 let costoBigliettoOver = costoBiglietto - quarantaPercento;
 
 // Calcolo prezzo totale
-
-document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBiglietto.toFixed(2) + '&euro;';
 
 if ( anniPasseggero < 18 ){
     document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBigliettoMinorenne.toFixed(2) + '&euro;';
