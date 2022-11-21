@@ -17,33 +17,25 @@ let costoBiglietto = numeroKm * 0.21;
 
 console.log(costoBiglietto);
 
-document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBiglietto.toFixed(2) + '&euro;';
-
 // Sconti
-
-// Sconti minorenni
 
 let ventiPercento = costoBiglietto * 0.20;
 
-let costoBigliettoMinorenne = costoBiglietto - ventiPercento;
-
-// Sconti over 65
-
 let quarantaPercento = costoBiglietto * 0.40;
 
-let costoBigliettoOver = costoBiglietto - quarantaPercento;
+let costoTotaleBiglietto = costoBiglietto;
 
 // Calcolo prezzo totale
 
 if ( anniPasseggero < 18 ){
-    document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBigliettoMinorenne.toFixed(2) + '&euro;';
-    console.log(costoBigliettoMinorenne);
-} else if ( anniPasseggero >= 65) {
-    document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBigliettoOver.toFixed(2) + '&euro;';
-    console.log(costoBigliettoOver);
+    costoTotaleBiglietto = costoBiglietto - ventiPercento;
+    console.log(costoTotaleBiglietto);
+} else if ( anniPasseggero >= 65 ) {
+    costoTotaleBiglietto = costoBiglietto - quarantaPercento;
+    console.log(costoTotaleBiglietto); 
 }
 
-
+document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoTotaleBiglietto.toFixed(2) + '&euro;';
 
 
 
