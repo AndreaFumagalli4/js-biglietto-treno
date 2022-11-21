@@ -7,7 +7,7 @@ const numeroKm = parseFloat (prompt ('Quanti chilometri farai?'));
 
 console.log(numeroKm);
 
-const anniPasseggero = parseFloat (prompt ('Quanti anni hai?'));
+const anniPasseggero = parseInt (prompt ('Quanti anni hai?'));
 
 console.log(anniPasseggero);
 
@@ -33,16 +33,16 @@ let costoBigliettoOver = costoBiglietto - quarantaPercento;
 
 // Calcolo prezzo totale
 
-if ( (anniPasseggero > 18) && (anniPasseggero < 65) ){
-    document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBiglietto.toFixed(2) + '&euro;';
-    console.log(costoBiglietto);
-} else if ( anniPasseggero < 18 ){
+document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBiglietto.toFixed(2) + '&euro;';
+
+if ( anniPasseggero < 18 ){
     document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBigliettoMinorenne.toFixed(2) + '&euro;';
     console.log(costoBigliettoMinorenne);
-} else {
+} else if ( anniPasseggero >= 65) {
     document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBigliettoOver.toFixed(2) + '&euro;';
     console.log(costoBigliettoOver);
 }
+
 
 
 
