@@ -34,13 +34,13 @@ let costoBigliettoOver = costoBiglietto - quarantaPercento;
 // Calcolo prezzo totale
 
 if ( (anniPasseggero > 18) && (anniPasseggero < 65) ){
-    document.getElementById('output').innerHTML = costoBiglietto.toFixed(2) + '&euro;';
+    document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBiglietto.toFixed(2) + '&euro;';
     console.log(costoBiglietto);
 } else if ( anniPasseggero < 18 ){
-    document.getElementById('output').innerHTML = costoBigliettoMinorenne.toFixed(2) + '&euro;';
+    document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBigliettoMinorenne.toFixed(2) + '&euro;';
     console.log(costoBigliettoMinorenne);
 } else {
-    document.getElementById('output').innerHTML = costoBigliettoOver.toFixed(2) + '&euro;';
+    document.getElementById('output').innerHTML = 'Il prezzo del biglietto è di ' + costoBigliettoOver.toFixed(2) + '&euro;';
     console.log(costoBigliettoOver);
 }
 
