@@ -19,13 +19,19 @@ console.log(costoBiglietto);
 
 // Sconti
 
+// Sconti minorenni
+
 let ventiPercento = costoBiglietto * 0.20;
 
 let costoBigliettoMinorenne = costoBiglietto - ventiPercento;
 
+// Sconti over 65
+
 let quarantaPercento = costoBiglietto * 0.40;
 
 let costoBigliettoOver = costoBiglietto - quarantaPercento;
+
+// Calcolo prezzo totale
 
 if ( (anniPasseggero > 18) && (anniPasseggero < 65) ){
     document.getElementById('output').innerHTML = costoBiglietto.toFixed(2) + '&euro;';
