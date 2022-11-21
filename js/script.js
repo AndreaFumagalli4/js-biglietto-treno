@@ -23,11 +23,11 @@ let ventiPercento = costoBiglietto * 0.20;
 
 let quarantaPercento = costoBiglietto * 0.40;
 
-let costoTotaleBiglietto = costoBiglietto;
-
 // Calcolo prezzo totale
 
-if ( anniPasseggero < 18 ){
+let costoTotaleBiglietto = costoBiglietto;
+
+if ( anniPasseggero < 18 ) {
     costoTotaleBiglietto = costoBiglietto - ventiPercento;
     console.log(costoTotaleBiglietto);
 } else if ( anniPasseggero >= 65 ) {
